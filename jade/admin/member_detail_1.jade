@@ -1,0 +1,183 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title Member Detail
+
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+
+    ="\n"
+    .page-content-wrapper
+      .page-content
+        .container
+          .main-body-content.member-page
+            .page-bar
+              ul.page-breadcrumb
+                li
+                  a(href="home.html").home 
+                    i.fa.fa-home
+                    span Home Page
+                li.menu-lever1
+                  a()
+                li.menu-lever2
+                  a()
+            ="\n"
+            form.form_sample_3
+              .member-title-table
+                .title-page.full.border-bottom.mrb-30
+                  h3.bold.pull-left 회원 상세
+                .full.border-full.pad-20-30.mrb-40
+                  .full.mrb-40
+                    .col-md-2
+                      p.text-center 프로필 사진
+                      .member-avatar
+                        .inputfile
+                          .tr-file-upload.image-upload
+                            .preview-image
+                              img(src="../../assets/images/avatar_men.png", alt='thumbnail')
+                            label.btn.green.btn-select-file
+                              | 수정
+                              input.hidden.input-file(type="file")
+                            //- span.help-inline 선택된 파일 없음.
+                            //- .input-icon
+                            //-   span.btn.red.btn-delete 삭제 
+                    .col-md-10
+                      .full.mrb-10
+                        .col-md-2.text-right.line-34.bg-f3 ID :
+                        .col-md-3 
+                          input.form-control.pull-left(type="text" value ='01-01')
+                        a.btn.green.pull-left 탈퇴
+
+                      .full.mrb-10
+                        .col-md-2.text-right.line-34.bg-f3 이름 :
+                        .col-md-3
+                          input.form-control.pull-left(type="text" value ='홍길동')
+
+                      .full.mrb-10
+                        .col-md-2.text-right.line-34.bg-f3 회원구분 :
+                        .col-md-3
+                          select.form-control.selectpickermember.text-left(name='selecttext',title="선택...")
+                            option(data-hidden="true")
+                            option(value='1') 1
+                            option(value='2') 2
+                            option(value='3') 3
+                            option(value='4') 4
+                        .col-md-3
+                          select.form-control.selectpickermember.text-left(name='selecttext',title="선택...")
+                            option(data-hidden="true")
+                            option(value='1') 1
+                            option(value='2') 2
+                            option(value='3') 3
+                            option(value='4') 4
+
+                      .full.mrb-10
+                      .col-md-2.text-right.line-34.bg-f3 휴대폰 번호 :
+                      .col-md-3 
+                        input.form-control.pull-left(type="text" value ='01012345678')
+                  
+
+                  .full.mrb-10
+                    .col-md-2.text-center.line-34.bg-f3 이메일 :
+                    .col-md-3
+                      input.form-control.width-90(type="text" value ='01-01')
+                    
+                      //- 
+
+                  .full.mrb-10
+                    .col-md-2.text-center.line-60.bg-f3 주소 :
+                    .col-md-10
+                      .row
+                        .col-md-2
+                          input.form-control(type="text" value ='12345')
+                        .col-md-2
+                          a.btn.green.pull-left.open-postcode-member 우편번호 검색
+                      .row
+                        .col-md-3
+                          input.form-control(type="text" value ='12345')
+                        .col-md-3
+                          input.form-control(type="text" value ='12345')
+
+                  .full.mrb-10
+                    .col-md-2.text-center.line-34.bg-f3 가입날짜 :
+                    .col-md-2.line-34 2017-05-01
+                    .col-md-2.text-center.line-34.bg-f3 가입경로 :
+                    .col-md-2.line-34 직접가입
+
+                  .full.mrb-10
+                    .col-md-2.text-center.line-34.bg-f3 보유 마일리지 :
+                    .col-md-10.line-34
+                      .row
+                        .col-md-1.bold.bg-f3 이전 ECO :
+                        .col-md-1 2500 P
+                        .col-md-1
+                        .col-md-1.bold.bg-f3 주행 :
+                        .col-md-1 1200 P
+                        .col-md-1
+                        .col-md-1.bold.bg-f3 즐겨찾기 :
+                        .col-md-1 250 P
+                        .col-md-1
+                        .col-md-1.bold.bg-f3 환승 :
+                        .col-md-1 250 P
+
+                  .full.mrb-10.line-34
+                    .col-md-2.text-center.bg-f3 자전거 NFC/QR 코드 :
+                    .col-md-2 000034
+                    .col-md-2 
+                    .col-md-2.text-center.bg-f3 승인날짜  :
+                    .col-md-2 2017-05-20
+
+                  .full.mrb-10.line-34
+                    .col-md-2.text-center.bg-f3 총 이동거리(km) :
+                    .col-md-4 
+                      .row
+                        .col-md-3.bold 이전 eco :
+                        .col-md-3 200
+                        .col-md-3.bold.bg-f3 현재 :
+                        .col-md-3 1200
+                    .col-md-2.text-center 총 활동수  :
+                    .col-md-2 2017-05-20
+
+                  .full.mrb-10.line-34
+                    .col-md-2.text-center 총 CO2 감축량 :
+                    .col-md-2.text-center.bold 이전 eco :
+                    .col-md-1  300 kg
+                    .col-md-1  
+                    .col-md-2.text-center 활동수  :
+                    .col-md-2 240
+
+                  .full.mrb-10.line-34
+                    .col-md-2.text-center 메모 :
+                    .col-md-6
+                      textarea.rw-ckeditor.form-control(name='editor2', rows='10')
+
+
+
+                  
+                  .full.text-center
+                    button.btn.red.pad-8-50 목록
+                    a.btn.green.pad-8-50.bus-button-confirm 수정
+
+            
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade
+  ="\n"
+  include ../includes/popuppostcode-member.jade

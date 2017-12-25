@@ -1,0 +1,111 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title education register detail
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  //- .sidebar-left
+  //-   include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+
+    ="\n"
+    .page-content-wrapper
+      .page-content
+        .container.width800
+          .main-body-content.member-page
+            ="\n"
+            form.form_sample_3
+            .member-title-table
+                .title-page.mrb-20
+                  h4.bold 서비스관리-상세   
+                .form
+                  .md-ct.full.pdl-50
+                    .row.mrb-30
+                      .col-md-4 기관 명
+                      .col-md-8 A센터
+                    .row.mrb-30
+                      .col-md-4 카테고리
+                      .col-md-8 예방서비스-홍보
+                    .row.mrb-30
+                      .col-md-4 프로그램 명
+                      .col-md-8 홍보교육
+                    .row.mrb-30
+                      .col-md-4 접수 기간 
+                      .col-md-8 2017.07.11 ~ 2017.09.11
+                    .row.mrb-30
+                      .col-md-4 진행기간 유형 
+                      .col-md-8 장기방문형
+                    .row.mrb-30
+                      .col-md-4 
+                      .col-md-8 
+                        .row.mrb-20
+                          .col-md-3 기간
+                          .col-md-8
+                            span.border-input 11
+                            span 달
+                        .row.mrb-20
+                          .col-md-3 총 횟수
+                          .col-md-8
+                            span.border-input 11
+                            span 회
+                        .row
+                          .col-md-3 주기
+                          .col-md-8
+                            span.border-input 주4회
+                    .row.mrb-30
+                      .col-md-4 진행일
+                      .col-md-8 2017.09.20 ~ 2017.10.20
+                    .row.mrb-30
+                      .col-md-4 참가비
+                      .col-md-8 12,000원
+                    .row.mrb-30
+                      .col-md-4 주소 
+                      .col-md-8 123-111 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 서울시 마포구 마포대교19 신화빌딩 10층
+                    .row.mrb-30
+                      .col-md-4 문의처 
+                      .col-md-8 010.2222.2222
+                    .row.mrb-30
+                      .col-md-4 홈페이지 주소
+                      .col-md-8 http://kkk.com
+                    .row.mrb-30
+                      .col-md-4 프로그램 안내
+                      .col-md-8 http://kkk.com
+                    .row.mrb-30
+                      .col-md-4 대상자(연령분류)
+                      .col-md-8 15~30
+                    .row.mrb-30
+                      .col-md-4 대상자(인터넷 이용관련 분류)
+                      .col-md-8 1231
+                    .row.mrb-30
+                      .col-md-4 모집인원
+                      .col-md-8 30
+                    .row.mrb-30
+                      .col-md-4 프로그램 이미지
+                      .col-md-8 
+                        img(src="../../assets/images/demo_single_2.jpg", alt='thumbnail')
+                    .row.mrb-30
+                      .col-md-4 프로그램 신청 기관 고유 양식 수신 이메일
+                      .col-md-8 
+                        span.border-input 11@gmail.com
+                    .row.mrb-30
+                      .col-md-4 프로그램 신청 기관 고요 양식 첨부
+                      .col-md-8 유
+
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade

@@ -1,0 +1,57 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title bus data detail
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+
+    ="\n"
+    .page-content-wrapper
+      .page-content
+        .container
+          .main-body-content.member-page
+            .page-bar
+              ul#page-breadcrumb.page-breadcrumb
+                
+            ="\n"
+            form.form_sample_3
+              .member-title-table
+                .title-page.full.border-bottom.mrb-30
+                  h3.bold.pull-left 트랙킹 데이터 상세
+                .full.border-full.pad-20-30.mrb-40
+                  .full.mrb-10
+                    p.text-right 1500438363795.kml
+                    .full
+                      span google map
+                    .full
+                      #jqChart(style='height: 370px; width: 100%;')
+                    .full
+                      textarea.rw-ckeditor.form-control(name='editor2', rows='6', placeholder='메모란')
+                      
+                  
+                  .full.text-center
+                    button.btn.red.pad-8-50 목록
+                    a.btn.green.pad-8-50.bus-button-confirm 저장
+
+            
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade

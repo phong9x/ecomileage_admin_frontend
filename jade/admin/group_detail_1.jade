@@ -1,0 +1,144 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title group detail 1
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+
+    ="\n"
+    .page-content-wrapper
+      .page-content
+        .container
+          .main-body-content.member-page
+            .page-bar
+              ul#page-breadcrumb.page-breadcrumb
+            ="\n"
+            .member-title-table
+              .title-page.full.border-bottom.mrb-30
+                h3.bold.pull-left 그룹 상세
+              .full.border-full.pad-20-30.mrb-40
+                .full.mrb-20
+                  .col-md-3.text-right.line-30 그룹명 :
+                  .col-md-4
+                    | Phong làm cho này
+                .full.mrb-20
+                  .col-md-3.text-right.line-30 그룹장 이름 :
+                  .col-md-3.line-30 홍길동
+                .full.mrb-20
+                  .col-md-3.text-right.line-30 그룹장 아이디 :
+                  .col-md-3
+                    span.line-30 abcd1234 &nbsp;
+                    button.btn.green.line-30.pad-0-10 그룹장 변경
+                .full.mrb-20
+                  .col-md-3.text-right.line-30 그룹 생성일 :
+                  .col-md-3.line-30 2017-01-12
+                .full.mrb-20
+                  .col-md-3.text-right.line-30 참여자 수 :
+                  .col-md-3.line-30 4
+                .full.mrb-20
+                  .col-md-3.text-right.line-30 그룹 총 주행거리 :
+                  .col-md-3.line-30 12,000 km
+                .full.mrb-20
+                  .col-md-3.text-right.line-30 그룹 총 CO2 감소량 :
+                  .col-md-3.line-30 250 kg
+                .full.mrb-20
+                  .col-md-3.text-right.line-30 그룹 소나무 수 :
+                  .col-md-3.line-30 12 그루
+                  
+                
+              .md-ct
+                .line-30.mrr-10 회원 리스트
+                button.btn.green.line-30.pad-0-10 회원 추가
+
+            .table-member-mng.table-responsive
+              table.table.table-striped.table-bordered.table-hover.text-center
+                thead
+                  tr
+                    th 번호
+                    th 이름
+                    th 아이디
+                    th 가입일
+                    th 주행거리
+                    th CO2 감소량
+                    th 소나무 수
+                    th 
+                tbody
+                  tr
+                    td 10
+                    td A1
+                    td KAS
+                    td 2017.04.04
+                    td 2017.04.04
+                    td 2017.04.04
+                    td 2017.04.04
+                    td 
+                      button.btn.green.pad-5-10 삭제
+                  tr
+                    td 10
+                    td A1
+                    td KAS
+                    td 2017.04.04
+                    td 2017.04.04
+                    td 2017.04.04
+                    td 2017.04.04
+                    td 
+                      button.btn.green.pad-5-10 삭제
+                  tr
+                    td 10
+                    td A1
+                    td KAS
+                    td 2017.04.04
+                    td 2017.04.04
+                    td 2017.04.04
+                    td 2017.04.04
+                    td 
+                      button.btn.green.pad-5-10 삭제
+                  tr
+                    td 10
+                    td A1
+                    td KAS
+                    td 2017.04.04
+                    td 2017.04.04
+                    td 2017.04.04
+                    td 2017.04.04
+                    td 
+                      button.btn.green.pad-5-10 삭제
+                  tr
+                    td 10
+                    td A1
+                    td KAS
+                    td 2017.04.04
+                    td 2017.04.04
+                    td 2017.04.04
+                    td 2017.04.04
+                    td 
+                      button.btn.green.pad-5-10 삭제
+                  
+                  
+            .full.text-center
+              button.btn.green.pad-10-50 목록    
+                    
+            //.table-member-mng
+
+           
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade

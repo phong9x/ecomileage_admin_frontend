@@ -1,0 +1,106 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title bus code write
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+
+    ="\n"
+    .page-content-wrapper
+      .page-content
+        .container
+          .main-body-content.member-page
+            .page-bar
+              ul.page-breadcrumb
+                li
+                  a(href="home.html").home 
+                    i.fa.fa-home
+                    | 홈
+                li
+                  a(href="home.html") 회원 관리
+            ="\n"
+            form.form_sample_3
+              .member-title-table
+                .title-page.full.border-bottom.mrb-30
+                  h3.bold.pull-left 버스 NFC/QR코드 등록
+                .full.border-full.pad-20-30.mrb-40
+                  .full.mrb-10
+                    .col-md-2.text-right.line-30 번호 :
+                    .col-md-10.line-30
+                      .col-md-6 2
+                      
+                  .full.mrb-10
+                    .col-md-2.text-right.line-30 고유번호 :
+                    .col-md-10.line-30
+                      .col-md-4
+                        input.form-control(type="text" value ='1000')
+                      button.btn.green 중복확인
+                      span.red.mrl-10 이미 등록된 고유번호입니다.
+                  .full.mrb-10
+                    .col-md-2.text-right.line-30 위치 :
+                    .col-md-10.line-30
+                      .col-md-3
+                        input.form-control(type="text" value ='동아운수')
+                      .col-md-3
+                        input.form-control(type="text" value ='1000')
+                      .col-md-3
+                        input.form-control(type="text" value ='1000')
+                      .col-md-3
+                        input.form-control(type="text" value ='하차문')
+                  .full.mrb-10
+                    .col-md-2.text-right.line-30 부여날짜 :
+                    .col-md-10
+                      .col-md-6
+                        .full.datepicker-form
+                          .item.datepicker-item
+                            span
+                              input.form-control.date-picker(name='test138', type='text', data-date-format='yyyy/mm/dd', value='2016/08/23')
+                            span.text 
+                              i.fa.fa-calendar(aria-hidden='true')
+                  .full.mrb-10
+                    .col-md-2.text-right.line-30 등록일 :
+                    .col-md-10.line-30
+                      .col-md-6 2017-05-30
+                  .full.mrb-30
+                    .col-md-2.text-right.line-30 사용여부 :
+                    .col-md-10.line-30
+                      .col-md-3
+                        select.form-control.selectpickermember.text-left(name='selecttext',title="선택...")
+                          option(data-hidden="true")
+                          option(value='1') 1
+                          option(value='2') 2
+                          option(value='3') 3
+                          option(value='4') 4
+                      .col-md-3
+                        select.form-control.selectpickermember.text-left(name='selecttext',title="선택...")
+                          option(data-hidden="true")
+                          option(value='1') 1
+                          option(value='2') 2
+                          option(value='3') 3
+                          option(value='4') 4
+                  .full.text-center
+                    button.btn.red.pad-8-50 목록
+                    a.btn.green.pad-8-50.bus-button-confirm 수정
+
+            
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  ="\n"
+  include ../includes/popupConfirmDelete.jade

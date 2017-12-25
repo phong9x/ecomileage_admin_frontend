@@ -1,0 +1,91 @@
+extends ../layouts/master.jade
+
+append titlePage
+  title campaign
+
+append body
+  +body(class="page-header-fixed page-quick-sidebar-over-content")
+
+append body-contents
+  .sidebar-left
+    include ../includes/page-sidebar-left.jade
+  include ../includes/header.jade
+  
+  ="\n"
+  .page-container
+    //- include ../includes/page-sidebar.jade
+
+    ="\n"
+    .page-content-wrapper
+      .page-content
+        .container
+          .main-body-content.member-page
+            .page-bar
+              ul.page-breadcrumb
+                li
+                  a(href="home.html").home 
+                    i.fa.fa-home
+                    | 홈
+                li
+                  a(href="home.html") 회원 관리
+            // .page-bar
+            ="\n"
+            .main-content.full
+              .title-page.full.border-bottom.mrb-20
+                h3.bold.pull-left 캠페인 관리
+                span 에코 마일리지 캠페인 정보를 관리합니다.
+              .item-main.full
+                h4 MEMBER (명)
+                .full.border-full.text-center.pdt-20
+                  .col-md-4
+                    p.mrb-20 올해의 캠페인 참여자 목표
+                    p 
+                      span.font-16 20,000
+                      button.btn.green.pad-5-10 수정
+                  .col-md-3
+                    p.mrb-20 올해의 참여자수
+                    p 
+                      span.font-16 5,123
+                  .col-md-2
+                    p.mrb-20 달성률
+                    p 
+                      span.font-16 25%
+                  .col-md-3
+                    p.mrb-20 지금까지의 참여자수
+                    p 
+                      span.font-16 496,627
+              .item-main.full
+                h4 CO2 감축량 (kg)
+                .full.border-full.text-center.pdt-20
+                  .col-md-4
+                    p.mrb-20 올해의 CO2 감축량 목표
+                    p 
+                      span.font-16 20,000
+                      button.btn.red.pad-5-10 x
+                      button.btn.green.pad-5-10 저장
+                  .col-md-3
+                    p.mrb-20 올해의 CO2 감축량
+                    p 
+                      span.font-16 2,523
+                  .col-md-2
+                    p.mrb-20 달성률
+                    p 
+                      span.font-16 25%
+                  .col-md-3
+                    p.mrb-20 지금까지의 CO2 감축량
+                    p 
+                      span.font-16 496,627
+                    
+            //.table-member-mng
+
+           
+            // .block-1
+          // .member-main
+      // .page-content
+    // .member
+  //.page-container
+  
+  ="\n"
+  include ../includes/footer.jade
+  
+  
